@@ -121,7 +121,6 @@ def should_clean_item(item, app_name: str):
             "status" in item
             and item["status"] == "warning"
             or item["trackedDownloadStatus"] == "warning"
-            or item["status"] == "queued"
         ):
             logging.info(
                 f'Removing stalled {app_name} download: {item["title"] if "title" in item else "Unknown"}'
